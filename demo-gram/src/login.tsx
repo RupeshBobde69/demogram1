@@ -1,19 +1,25 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function login() {
+interface LoginProps {
+  onLogin: () => void;
+}
+
+function Login({ onLogin }: LoginProps) {
   const [userData, setUserData] = useState({
     username: "",
     password: "",
   });
   const [submitData, setSubmitData] = useState<any>(null);
+
   const show = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserData({ ...userData, [event.target.id]: event.target.value });
-    console.log(userData);
   };
+
   const submitedData = () => {
     setSubmitData(userData);
+    onLogin(); // Mark as logged in
   };
+
   return (
     <div>
       <h1>Login</h1>
@@ -35,4 +41,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
