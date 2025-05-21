@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface LoginProps {
   onLogin: () => void;
@@ -37,6 +38,7 @@ function Login({ onLogin }: LoginProps) {
         Login
       </button>
       <p>{submitData && JSON.stringify(submitData)}</p>
+      <Link to="/registration">Registration</Link>
     </div>
   );
 }

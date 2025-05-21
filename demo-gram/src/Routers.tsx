@@ -4,7 +4,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Registration from "./Registration";
 
-function App() {
+function Routers() {
   return (
     <BrowserRouter>
       <Routes>
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Routers;

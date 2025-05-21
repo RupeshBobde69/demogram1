@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface RegitationProps {
   handleRegister: () => void;
@@ -50,6 +51,8 @@ function Registration({ handleRegister }: RegitationProps) {
         </button>
         <p>{submitData && JSON.stringify(submitData)}</p>
       </div>
+                <Link to="/login">Login</Link>
+
     </>
   );
 }
