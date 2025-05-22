@@ -18,7 +18,7 @@ function Registration({ handleRegister }: RegitationProps) {
     setUserData({ ...userData, [event.target.id]: event.target.value });
   };
   const submitedData = () => {
-    setSubmitData(userData);
+    setSubmitData(userData);3
     handleRegister();
   };
   return (
@@ -51,8 +51,7 @@ function Registration({ handleRegister }: RegitationProps) {
         </button>
         <p>{submitData && JSON.stringify(submitData)}</p>
       </div>
-                <Link to="/login">Login</Link>
-
+      <Link to="/login">Login</Link>
     </>
   );
 }
